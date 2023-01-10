@@ -1,0 +1,27 @@
+*{
+
+    margin:0;
+    padding:0;
+}
+
+#edit{
+    text-align: center;
+    font-size:2rem;
+    margin:10px;
+}
+.personal{
+    margin:10%;
+   
+}
+input{
+   border-radius: 2px;
+  
+    padding:2px;
+    opacity: 0.3;
+}
+.personal >h2 , .research>h2{
+    text-align: center;
+}
+textarea{
+    opacity: 0.3;
+}
