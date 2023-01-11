@@ -6,31 +6,59 @@
         <link rel="stylesheet" href="/form/style.css">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     </head>
-</html>
-<body>
- <form>
-    <h2 id="edit">Edit Details</h2>
-    <div class="personal">
-        <h2>Personal Information</h2><br>
-        <label>Name</label><br>
-        <input type="text" name="name"><br><br>
-        <label>Educational Qualification</label><br>
-        <!-- <input type="text" name = "edu" rows="10" cols=""><br><br> -->
-        <textarea rows="10" cols="70"></textarea><br><br>
-        <label>Area Of Specialization</label><br>
-        <textarea rows="10" cols="70"></textarea><br><br>
-        <label>Contact</label><br>
-        <textarea rows="10" cols="70"></textarea><br><br>
-        <label>Phone No</label><br>
-        <input type="phone" name="phoneNo"><br><br>
-        <label>EmailId</label><br>
-        <input type="email" name="phoneNo"><br><br>
-        <!-- <input type="text" name = "specialization"> -->
-        <label>Upload Image</label>
-        <input type="file" name="img">
-    </div>
-    <div class="research">
-        <h2> Research & Publication</h2>
-    </div>
-</form>
+    </html>
+    <body>
+        <form>
+            <h2 id="edit">Edit Details</h2>
+            <div class="personal">
+                <h2>Personal Information</h2><br>
+                <label for="nameField">Name</label><br>
+                <input type="text" name="name" id="name"><br><br>
+                <label>Educational Qualification</label><br>
+                <!-- <input type="text" name = "edu" rows="10" cols=""><br><br> -->
+                <textarea rows="10" cols="70"></textarea><br><br>
+                <label>Area Of Specialization</label><br>
+                <textarea rows="10" cols="70"></textarea><br><br>
+                <label>Contact</label><br>
+                <textarea rows="10" cols="70"></textarea><br><br>
+                <label>Phone No</label><br>
+                <input type="phone" name="phoneNo"><br><br>
+                <label>EmailId</label><br>
+                <input type="email" name="email"><br><br>
+                <!-- <input type="text" name = "specialization"> -->
+                <label>Upload Image</label>
+                <input type="file" name="img" id="uploadImg">
+                <div class="research">
+                    <br><h2> Research & Publication</h2><br><br>
+                    <div class="areaResearch">
+                        <label>Area(s) of Research:</label><br>
+                        <textarea rows="5" cols="70" class="form-control"></textarea><br><br>
+                        <div class="container" id="area">
+                            <button onclick="addAreaofResearch()">Add</button>
+                        </div>
+                    </div><br>
+                    <div class="researchInterests">
+                        <label>Research Interests:</label><br>
+                        <textarea rows="5" cols="70" class="form-control"></textarea><br><br>
+                        <div class="container" id="interests">
+                            <button onclick="addResearchInterests()">Add</button>
+                        </div>
+                    </div><br>
+                    <div class="honors">
+                        <label>Honors and Recognitions:</label><br>
+                        <textarea rows="5" cols="70" class="form-control"></textarea><br><br>
+                        <div class="container" id="hons">
+                            <button onclick="addHonors()">Add</button>
+                        </div>
+                    </div><br>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="container" id="view">
+                <button>View Profile</button>
+            </div>
+        </form>
+        <script src="/form/script.js"></script>
 </body>

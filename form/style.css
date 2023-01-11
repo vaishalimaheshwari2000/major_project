@@ -10,12 +10,12 @@
     margin:10px;
 }
 .personal{
-    margin:10%;
+    margin:5%;
    
 }
 input{
-   border-radius: 2px;
-  
+    border-radius: 2px;
+    align-items: center;
     padding:2px;
     opacity: 0.3;
 }
@@ -24,4 +24,19 @@ input{
 }
 textarea{
     opacity: 0.3;
+}
+
+.container >button{
+    align-items: center;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 2px;
+    border:none;
+    padding:5px;
+    
+}
+
+#view{
+    text-align: center;
+    align-items: center;
 }
