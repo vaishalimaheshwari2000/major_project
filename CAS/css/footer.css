@@ -1,0 +1,48 @@
+#footerlink ul li 
+{ padding: 0; margin: 0; 
+}
+
+#footerlink p
+{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	color:#FFF;
+	font-weight:500;
+	background:#000000;
+	padding:5px 5px;	
+}
+
+#footerlink ul li  
+{
+
+	color:#FFF;
+	
+}
+
+#footerlink ul li a 
+{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:13px;
+	font-style:normal;
+	
+	font-weight:400;
+	text-decoration: none;
+}
+
+
+
+
+A:link { COLOR: #FFF; TEXT-DECORATION: none; font-weight: normal }
+A:visited { COLOR: #FFF; TEXT-DECORATION: none; font-weight: normal }
+A:active { COLOR: #FFF; TEXT-DECORATION: none }
+A:hover { COLOR: #399; TEXT-DECORATION: none; font-weight: none }
+
+.copyright
+{font:Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#FFF;
+text-align:center;
+vertical-align:central;
+background-color:#000;
+}
