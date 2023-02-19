@@ -404,6 +404,7 @@ $Enclosures10 = $_POST['Enclosures10'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="script.js"> </script>
     <title>CAS Proforma Part B| II</title>
 </head>
 
@@ -491,7 +492,8 @@ tr:nth-child(even) {
             </div>
         </nav>
         <br>
-        <form action="#" method="post">
+        <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+      
         <h4 style="text-decoration:underline; text-align: center;">PART B: ASSESSMENT OF PERFORMANCE</h4>
         <h5 style="text-decoration:underline; text-align: center;"> Information for the Year <input type="text"
                 maxlength="4" style="width: 80px;">to<input type="text" maxlength="4"
@@ -506,7 +508,7 @@ tr:nth-child(even) {
                         (With Evidences)
                     </b> </label><br>
                     <label for="#"> Title with Page Nos</label>
-                        <input type=" text" name='title' class="form-control" id="firstname"><br>
+                        <input type=" text" name='title' class="form-control" id="title"><br>
 
 
                         <label for="#"> Journal & Date of Publication</label>
@@ -523,7 +525,7 @@ tr:nth-child(even) {
                         <input type=" text" class="form-control" name='noAuth' id="noAuth"><br>
                         <label for="#"> Whether you are the main author</label>
                         <input type=" text" class="form-control" name='main' id="main"><br>
-                        <label for="#"> Score
+                        <label for="#"> Score,
                             (Please refer
                             Table 2: Appendix II) author</label>
                         <input type=" text" class="form-control" name='score' id="score"><br>
@@ -588,10 +590,13 @@ tr:nth-child(even) {
                 <?php
                 // session_start();
                  $showAlert = false;
-                 $showData = '';
+                //  $showData = '';
+                 $data_array = array();
+                //  $data_array= '';
+                 $data = '';
                  //    if($_SERVER['REQUEST_METHOD'] == "POST")
                  //     { 
-                     if(isset($_POST['submit-1']) && !empty($_POST))
+                     if(isset($_POST['submit-1']) )
 // {                             $_SESSION['form_submitted'] = true;
   {
                          $titleNo = $_POST["title"];
@@ -605,33 +610,48 @@ tr:nth-child(even) {
                          $query = "INSERT INTO `researchpaper` (`Title with Page Nos`, `Journal & Date of Publication`, `ISSN / ISBN No. of Publication`, `Whether Peer Reviewed Impact Factor, if any`, `No. of co-authors`,`Whether you are the main author`, `Score author`) VALUES ('$titleNo', '$date', '$issnNo', '$review', '$noAuth', '$main','$score')";
                        
                           $data = mysqli_query($conn, $query);
-                          $data_array = array();
+                          
+                        
                           $sql = "SELECT * FROM `researchpaper` order by `Journal & Date of Publication` DESC";
                           $dataArray = mysqli_query($conn, $sql);
-                          $data_array = array();
+                          mysqli_close($conn);
 
+  }
+                        //   $sql = "SELECT * FROM `researchpaper` order by `Journal & Date of Publication` DESC";
+                        //   $dataArray = mysqli_query($conn, $sql);
+                       
+
+?>
+<?php
+                        // mysqli_open($conn);
+                      
                         
                            if($data)
                            { $showAlert = true;
                               while($rows = mysqli_fetch_assoc($dataArray))
                                  { $data_array[] = $rows; }
+                                 
                  
                          }
-                         unset($data);  
-                         echo $data;
+                        
                          if($showAlert){
-                           
+                        //    header("Locat+000477ion:CASpartB2.php");
+
                         //   echo" Data Inserted into db";
                          } 
                        else {
                           
                         echo "failed".mysqli_error($conn); }
-                 
-                      }
+                 ?>
                       
-                
+
+                      <!-- mysqli_close($conn); ?> -->
+                      
+                    <!-- //   if($showAlert){
+                    // //   header('Location: CASpartB2.php');
+                    //   exit(); } -->
             
-                       foreach($data_array as $showData){ ?>
+                  <?php     foreach($data_array as $showData){ ?>
 
                           <tr>
                             <td><?php echo $showData ['Title with Page Nos']; ?></td>
@@ -1702,24 +1722,24 @@ tr:nth-child(even) {
         <br>
         <br> -->
     </form>
-  <script>
+ 
+
+<script>
+
+
+// const tiltle = document.querySelector("#tiltle");
+// const date = document.querySelector("#date");
+// const issn = document.querySelector("#issn");
+// const review = document.querySelector("#review");
+// const noAuth = document.querySelector("#noAuth");
+// const main = document.querySelector("#main");
+// const score = document.querySelector("#score");
 
 
 
-document.querySelector('.input_field').addEventListener('click', (e)=>{
-    // console.log(pwd.value);
-    // e.preventDefault();
-//     if((pwd.value)===(Cpwd.value)){
-//         e.preventDefault();
-//         document.querySelector('.alert').style.display ='block';
-   
-//     }
-//     else
-//    {  document.querySelector('#invalid').innerHTML+=`<p>Invalid Credentials!</p>`;
-//      }
-     
- });
-  </script>
+</script> 
+
+
    
 
 </body>

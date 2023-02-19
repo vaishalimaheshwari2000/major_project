@@ -13,4 +13,14 @@
         else
          echo "successfully connected\n";
 
+
+
+
+?>
+
+<?php
+
+
+
+
 ?>
