@@ -59,14 +59,6 @@
                         <input type=" text" class="form-control" name="lname" id="laststname">
 
 
-<!-- 
-                        <label for="#"> Gender</label>
-                        <label for="male" class="radio-inline"> <input type="radio" name="gender" id="male"> Male
-                        </label>
-                        <label for="female" class="radio-inline"> <input type="radio" name="gender" id="female"> Female
-                        </label>
-                        <label for="others" class="radio-inline"> <input type="radio" name="gender" id="others"> Others
-                        </label> -->
                            <br>
                         <label for="#">Phone Number</label>
                         <input type="" class="form-control" id="number" name='phone' required placeholder="">
@@ -110,35 +102,29 @@
                         $password =  $_POST['password'];
                          $Cpassword = $_POST['cpwd'];
                      
-                        //  $first_name =   mysql_real_escape_string( $_POST['fname']);
-                        //  $last_name =    mysql_real_escape_string( $_POST['lname']);
-                        //  $phone_no =  mysql_real_escape_string($_POST['phone']);
-                        //  $email =  mysql_real_escape_string($_POST['email']);
-                        //  $password =  mysql_real_escape_string($_POST['password']);
-                        //  $Cpassword =  mysql_real_escape_string($_POST['cpwd']);
+                
                        
                       if(($password==$Cpassword)){
                             echo"Post";
                             echo "<br>";
                             $query = "INSERT INTO `users` (`fname`,`lname`,`contact`,`email`,`password`,`cpassword`) VALUES ('$firstname','$lastname','$phoneno','$email','$password', '$Cpassword')"; 
                         //    $querryString =  implode($query);
-                            echo $query;
+                            // echo $query;
                             $data = mysqli_query($conn,$query);
-                            echo "<br>";
-                            // $dataArray =  implode($data);
-                            echo $data;
+                            // header("location:home.php?un=$username");
                        if($data)
                          $showAlert = true;
                        if($showAlert){
                         // echo" Data Inserted into db";
                         // echo"post";
-                        echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                              <strong> Successfully Submitted! </strong> 
-                              <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                              <span>&times;</span>
-                            </button>
-                        <div>";
-                         
+                        // echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                        //       <strong> Successfully Submitted! </strong> 
+                        //       <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                        //       <span>&times;</span>
+                        //     </button>
+                        // <div>";
+                        header("location:home.php?un=$firstname");
+
                        }  
                      else {
                         

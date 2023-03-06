@@ -1,106 +1,191 @@
                                       <!-- PERFECTLY WORKING FILE -->
-<?php
-$insert = false;
-if(isset($_POST['course1'])){
+<!-- // $insert = false;
+// if(isset($_POST['course1'])){
 
-$server = "localhost";
-$username = "root";
-$password = "";
+// $server = "localhost";
+// $username = "root";
+// $password = "";
 
-$con = mysqli_connect($server, $username, $password);
- if (!$con) {
-   die("connection Failed due to " . mysqli_connect_error());
+// $con = mysqli_connect($server, $username, $password);
+//  if (!$con) {
+//    die("connection Failed due to " . mysqli_connect_error());
 
- }
+//  }
 
- $course1 = $_POST['course1'];
- $a1 = $_POST['a1'];
- $b1 = $_POST['b1'];
- $pr1 = $_POST['pr1'];
- $grade1 = $_POST['grade1'];
+//  $course1 = $_POST['course1'];
+//  $a1 = $_POST['a1'];
+//  $b1 = $_POST['b1'];
+//  $pr1 = $_POST['pr1'];
+//  $grade1 = $_POST['grade1'];
 
- $course2 = $_POST['course2'];
- $a2 = $_POST['a2'];
- $b2 = $_POST['b2'];
- $pr2 = $_POST['pr2'];
- $grade2 = $_POST['grade2'];
+//  $course2 = $_POST['course2'];
+//  $a2 = $_POST['a2'];
+//  $b2 = $_POST['b2'];
+//  $pr2 = $_POST['pr2'];
+//  $grade2 = $_POST['grade2'];
 
- $course3 = $_POST['course3'];
- $a3 = $_POST['a3'];
- $b3 = $_POST['b3'];
- $pr3 = $_POST['pr3'];
- $grade3 = $_POST['grade3'];
+//  $course3 = $_POST['course3'];
+//  $a3 = $_POST['a3'];
+//  $b3 = $_POST['b3'];
+//  $pr3 = $_POST['pr3'];
+//  $grade3 = $_POST['grade3'];
 
- $course4 = $_POST['course4'];
- $a4 = $_POST['a4'];
- $b4 = $_POST['b4'];
- $pr4 = $_POST['pr4'];
- $grade4 = $_POST['grade4'];
+//  $course4 = $_POST['course4'];
+//  $a4 = $_POST['a4'];
+//  $b4 = $_POST['b4'];
+//  $pr4 = $_POST['pr4'];
+//  $grade4 = $_POST['grade4'];
 
- $course5 = $_POST['course5'];
- $a5 = $_POST['a5'];
- $b5= $_POST['b5'];
- $pr5 = $_POST['pr5'];
- $grade5 = $_POST['grade5'];
+//  $course5 = $_POST['course5'];
+//  $a5 = $_POST['a5'];
+//  $b5= $_POST['b5'];
+//  $pr5 = $_POST['pr5'];
+//  $grade5 = $_POST['grade5'];
 
- $course6 = $_POST['course6'];
- $a6 = $_POST['a6'];
- $b6 = $_POST['b6'];
- $pr6 = $_POST['pr6'];
- $grade6 = $_POST['grade6'];
+//  $course6 = $_POST['course6'];
+//  $a6 = $_POST['a6'];
+//  $b6 = $_POST['b6'];
+//  $pr6 = $_POST['pr6'];
+//  $grade6 = $_POST['grade6'];
 
-//  Activitie 	Activities_attended
-$Activitie1= $_POST['Activitie1'];
-$gr1 = $_POST['gr1'];
-$Activitie2 = $_POST['Activitie2'];
-$gr2 = $_POST['gr2'];
-$Activitie3 = $_POST['Activitie3'];
-$gr3 = $_POST['gr3'];
-$Activitie4 = $_POST['Activitie4'];
-$gr4 = $_POST['gr4'];
-$Activitie5 = $_POST['Activitie5'];
-$gr5 = $_POST['gr5'];
-$Activitie6 = $_POST['Activitie6'];
-$gr6 = $_POST['gr6'];
-$Activitie7 = $_POST['Activitie7'];
-$gr7 = $_POST['gr7'];
+// $Activitie1= $_POST['Activitie1'];
+// $gr1 = $_POST['gr1'];
+// $Activitie2 = $_POST['Activitie2'];
+// $gr2 = $_POST['gr2'];
+// $Activitie3 = $_POST['Activitie3'];
+// $gr3 = $_POST['gr3'];
+// $Activitie4 = $_POST['Activitie4'];
+// $gr4 = $_POST['gr4'];
+// $Activitie5 = $_POST['Activitie5'];
+// $gr5 = $_POST['gr5'];
+// $Activitie6 = $_POST['Activitie6'];
+// $gr6 = $_POST['gr6'];
+// $Activitie7 = $_POST['Activitie7'];
+// $gr7 = $_POST['gr7'];
 
-$Activities_attended1 = $_POST['Activities_attended1'];
-$Activities_attended2 = $_POST['Activities_attended2'];
-$Activities_attended3 = $_POST['Activities_attended3'];
-$Activities_attended4 = $_POST['Activities_attended4'];
-$Activities_attended5 = $_POST['Activities_attended5'];
-$Activities_attended6 = $_POST['Activities_attended6'];
+// $Activities_attended1 = $_POST['Activities_attended1'];
+// $Activities_attended2 = $_POST['Activities_attended2'];
+// $Activities_attended3 = $_POST['Activities_attended3'];
+// $Activities_attended4 = $_POST['Activities_attended4'];
+// $Activities_attended5 = $_POST['Activities_attended5'];
+// $Activities_attended6 = $_POST['Activities_attended6'];
 
 
 
 
-$sql = "INSERT INTO `cas`.`casb1` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$course1,$a1,$b1,$pr1,$grade1','$course2,$a2,$b2,$pr2,$grade2','$course3,$a3,$b3,$pr3,$grade3','$course4,$a4,$b4,$pr4,$grade4','$course5,$a5,$b5,$pr5,$grade5','$course6,$a6,$b6,$pr6,$grade6');";
+// $sql = "INSERT INTO `cas`.`casb1` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$course1,$a1,$b1,$pr1,$grade1','$course2,$a2,$b2,$pr2,$grade2','$course3,$a3,$b3,$pr3,$grade3','$course4,$a4,$b4,$pr4,$grade4','$course5,$a5,$b5,$pr5,$grade5','$course6,$a6,$b6,$pr6,$grade6');";
 
 
 
 
-    $sql1 = "INSERT INTO `cas`.`casb2` (`1`, `2`, `3`, `4`, `5`, `6`,`7`) VALUES ('$Activitie1,$gr1','$Activitie2,$gr2','$Activitie3,$gr3','$Activitie4,$gr4','$Activitie5,$gr5','$Activitie6,$gr6','$Activitie7,$gr7');";
+//     $sql1 = "INSERT INTO `cas`.`casb2` (`1`, `2`, `3`, `4`, `5`, `6`,`7`) VALUES ('$Activitie1,$gr1','$Activitie2,$gr2','$Activitie3,$gr3','$Activitie4,$gr4','$Activitie5,$gr5','$Activitie6,$gr6','$Activitie7,$gr7');"; -->
 
    
-
-       $sql2 = "INSERT INTO `cas`.`casb3` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$Activities_attended1','$Activities_attended2','$Activities_attended3','$Activities_attended4','$Activities_attended5','$Activities_attended6');";
+<!-- 
+//        $sql2 = "INSERT INTO `cas`.`casb3` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$Activities_attended1','$Activities_attended2','$Activities_attended3','$Activities_attended4','$Activities_attended5','$Activities_attended6');";
        
-       if($con->query($sql) == true){
-    echo ""; }
+//        if($con->query($sql) == true){
+//     echo ""; }
 
-      if($con->query($sql1) == true){
-       echo ""; }
+//       if($con->query($sql1) == true){
+//        echo ""; }
 
-       if($con->query($sql2) == true){
-          echo ""; }
+//        if($con->query($sql2) == true){
+//           echo ""; }
 
 
-    $con->close();
-      }
+//     $con->close();
+//       } --> 
 
-    
-?>
+<?php
+
+
+require('library/php-excel-reader/excel_reader2.php');
+require('library/SpreadsheetReader.php');
+require('connection.php');
+
+
+if(isset($_POST['Submit'])){
+ 
+  //  echo $_FILES["file"]["type"];
+  // $mimes = ['application/vnd.ms-excel','text/xls','text/xlsx','application/vnd.oasis.opendocument.spreadsheet'];
+//   if ($_FILES["file"]["error"] > 0) {
+//     // Handle the error
+//     echo "Error: " . $_FILES["file"]["error"];
+// } else {
+//     // The file was uploaded successfully
+//     echo "Type: " . $_FILES["file"]["type"];
+// }
+  $mimes = ['application/vnd.ms-excel','application/vnd.oasis.opendocument.spreadsheet','text/xls','text/xlsx','text/csv'];
+  $fileName = $_FILES["file"]["name"];
+  // echo $_FILES["file"]["size"];
+  $checking = explode(".", $fileName);
+  // $fileName= isset($fileName) ? $fileName:"Default";
+   $file_ext = end($checking);
+   echo $fileName;
+  if(in_array($file_ext,$mimes)){
+
+
+    $uploadFilePath = 'uploads/'.basename($_FILES['file']['name']);
+    move_uploaded_file($_FILES['file']['tmp_name'], $uploadFilePath);
+
+
+    $Reader = new SpreadsheetReader($uploadFilePath);
+
+
+    $totalSheet = count($Reader->sheets());
+
+  //  echo "<pre>";print_r($totalSheet->rows(1));
+
+    echo "You have total ".$totalSheet." sheets".
+
+
+    $html="<table border='1'>";
+    $html.="<tr><th>Title</th><th>Description</th></tr>";
+
+
+    /* For Loop for all sheets */
+    for($i=0;$i<$totalSheet;$i++){
+
+  
+      $Reader->ChangeSheet($i);
+
+
+      foreach ($Reader as $Row)
+      {
+        $html.="<tr>";
+        $title = isset($Row[0]) ? $Row[0] : '';
+        $description = isset($Row[1]) ? $Row[1] : '';
+        $html.="<td>".$title."</td>";
+        $html.="<td>".$description."</td>";
+        $html.="</tr>";
+
+
+        $query = "insert into items(title,description) values('".$title."','".$description."')";
+
+
+        $mysqli->query($query);
+       }
+
+
+    }
+
+
+    $html.="</table>";
+    echo $html;
+    echo "<br />Data Inserted in dababase";
+
+
+  }else { 
+    die("<br/>File type is not allowed. Only Excel file."); 
+  }
+
+
+}
+
+
+?>   
+
  <!DOCTYPE html>
 <html lang="en">
 
@@ -288,7 +373,26 @@ $sql = "INSERT INTO `cas`.`casb1` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$cours
                     (Regularity and punctuality in classes, remedial teaching, clarifying doubts, counseling, mentoring,
                     additional teaching etc.)
                 </label>
-                <table frame="box">
+
+
+                <div class="container">
+	<!-- <h1>Excel Upload</h1> -->
+
+
+	<form method="POST" action="#" enctype="multipart/form-data">
+		<div class="form-group">
+			<label>Upload Excel File</label>
+			<input type="file" name="file" class="form-control">
+		</div>
+		<div class="form-group">
+			<button type="submit" name="Submit" class="btn btn-success">Upload</button>
+		</div>
+		<!-- <p>Download Demo File from here : <a href="demo.ods"><strong>Demo.ods</strong></a></p> -->
+	</form>
+</div>
+
+
+                <!-- <table frame="box">
                     <tr class="table">
                       <td align="center">
                         S.N.
@@ -364,9 +468,9 @@ $sql = "INSERT INTO `cas`.`casb1` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$cours
                     </tr>
             
 
-                  </table>
+                  </table> -->
 
-                <table> 
+                <!-- <table> 
                     <tr>
                         <th colspan="2"> * <u> Grading Criteria </u> </th>
                     </tr>
@@ -526,7 +630,7 @@ $sql = "INSERT INTO `cas`.`casb1` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES ('$cours
     <br>
     <br><br>
     <br>
-    <script src = "CASpartB.php" > </script>
+    <script src = "CASpartB.php" > </script> -->
 
 </body>
 
